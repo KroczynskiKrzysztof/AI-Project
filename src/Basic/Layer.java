@@ -16,14 +16,14 @@ public class Layer {
             neurons.add(new SigmoidNeuron(size, String.valueOf(i),a));
         }
     }
-    public Double[] queryLayer(Double[] data){
+    public Double[] calcActivation(Double[] data){
         Double[] result = new Double[neurons.size()];
         for (int i = 0; i < neurons.size(); i++) {
             result[i]= neurons.get(i).calcActivation(data);
         }
         return result;
     }
-    public Double[] queryLayerRaw(Double[] data){
+    public Double[] calcNet(Double[] data){
         Double[] result = new Double[neurons.size()];
         for (int i = 0; i < neurons.size()-1; i++) {
             result[i]= neurons.get(i).calcActivation(data);

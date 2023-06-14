@@ -38,13 +38,7 @@ public class ImageSingleLayerNetwork {
             System.out.print(a1+"\t ");
             System.out.println(d[a1-'A']);
         }
-//        Scanner scanner = new Scanner(System.in);
-//       // while (true) {
-//            Double[] data = ImageTools.getSamplesFromFile(Path.of("Z:\\sem4\\nai\\Perceptron\\Letters\\2.png"), sampleCount);
-//            HashMap<String, Double> verdictsAndValues = Perceptron.askSingleLayerNetwork(perceptronArrayList, data);
-//            System.out.println("Verdict \t value");
-//            verdictsAndValues.forEach(((s1, aDouble) -> System.out.printf("%s \t %f %n", s1, aDouble)));
-        //}
+
 
     }
     public static Double[] testNetwork(ArrayList<Row> testSet,ArrayList<Neuron> neuronArrayList){

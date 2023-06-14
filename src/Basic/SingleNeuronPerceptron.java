@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class SoloPerceptron {
+public class SingleNeuronPerceptron {
     public static void main(String[] args) {
         // declare variables
         double a = 0;

@@ -15,9 +15,6 @@ public class FlowersMultilayerNetwork {
         multiLayerNetwork.learnEpoch(trainingSet,10000);
 
         int[][] matrix=(multiLayerNetwork.testNetworkMatrix(trainingSet));
-//        for (String className : classNames) {
-//            System.out.print(className);
-//        }
         System.out.println();
         for (int i = 0; i < matrix.length; i++) {
             System.out.println((classNames.get(i))+":\t");

@@ -28,21 +28,7 @@ public class ImageMultilayerNetwork {
         multiLayerNetwork.learnEpoch(trainingSet,epochs);
 
         multiLayerNetwork.saveMe("C:\\Users\\krocz\\Documents\\nai\\network"+epochs+new Timestamp(System.currentTimeMillis()).toString().replace(":","-")+".json");
-//        Scanner scanner = new Scanner(System.in);
-//        System.out.println("ready!");
-//        while(true){
-//            Double[] data = ImageTools.getSamplesFromFile(Path.of(scanner.nextLine()), sampleCount);
-//            Double[] verdict = multiLayerNetwork.askAllLayers(data);
-//            ArrayList<Map.Entry<String, Double>> list = new ArrayList<>();
-//            for (int i = 0; i < verdict.length; i++) {
-//                Double aDouble = verdict[i];
-//                list.add(new AbstractMap.SimpleEntry<>(classNames.get(i), aDouble));
-//            }
-//            list.sort(((o1, o2) -> -Double.compare(o1.getValue(), o2.getValue())));
-//            for (Map.Entry<String, Double> stringDoubleEntry : list) {
-//                System.out.println(stringDoubleEntry.getKey() + "\t" + stringDoubleEntry.getValue());
-//            }
-//        }
+
 
 
         int[][] matrix=(multiLayerNetwork.testNetworkMatrix(trainingSet));

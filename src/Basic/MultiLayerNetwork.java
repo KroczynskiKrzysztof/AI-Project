@@ -22,7 +22,7 @@ public class MultiLayerNetwork {
     public Double[] askAllLayers(Double[] data) {
         Double[] doubles = data.clone();
         for (int i = 0; i < layers.size(); i++) {
-            doubles = layers.get(i).queryLayer(doubles).clone();
+            doubles = layers.get(i).calcActivation(doubles).clone();
             outputs.set(i, doubles.clone());
         }
         return outputs.get(outputs.size() - 1);

@@ -24,11 +24,11 @@ public class Kmeans {
     }
     public int assignNearestCentroids(){
         int changes = 0;
-        for (int i = 0; i < observations.size(); i++) {
-            Double[] newCentroid = getNearestCentroid(observations.get(i));
+        for (Row observation : observations) {
+            Double[] newCentroid = getNearestCentroid(observation);
 
-            if (!Arrays.equals(newCentroid, observationCentroidMap.get(observations.get(i)))) {
-                observationCentroidMap.replace(observations.get(i), newCentroid);
+            if (!Arrays.equals(newCentroid, observationCentroidMap.get(observation))) {
+                observationCentroidMap.replace(observation, newCentroid);
                 changes++;
             }
         }
@@ -44,7 +44,7 @@ public class Kmeans {
 
     public static Double calcDistance(Double[] d1,Double[] d2){
         if (d1.length!=d2.length) throw new RuntimeException();
-        Double distance = 0.;
+        double distance = 0.;
         for (int i = 0; i < d1.length; i++) {
             distance+=Math.pow(d1[i]-d2[i],2);
         }
